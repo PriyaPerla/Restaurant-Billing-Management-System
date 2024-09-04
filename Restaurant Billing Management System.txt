@@ -1,0 +1,378 @@
+import javax.swing.*; 
+import java.awt.event.*; 
+import java.awt.Font; 
+public class Cost extends JFrame implements ActionListener 
+{ 
+JLabel l,l1,l2,l3,l4; 
+JCheckBox cb1,cb2,cb3,cb4,cb5,cb6,cb7,cb8,cb9,cb10; 
+JCheckBox cb11,cb12,cb13,cb14,cb15,cb16,cb17,cb18,cb19,cb20; 
+JCheckBox cb21,cb22,cb23,cb24,cb25,cb26,cb27,cb28,cb29,cb30; 
+JCheckBox cb31,cb32,cb33,cb34,cb35,cb36,cb37,cb38,cb39,cb40; 
+JButton b; 
+Cost() 
+{ 
+l=new JLabel("Menu is:"); 
+l.setBounds(850,30,300,50); 
+l.setFont(new Font("Serif",Font.PLAIN,50)); 
+l1=new JLabel("NON VEG FOOD:"); 
+l1.setBounds(250,150,300,30); 
+l1.setFont(new Font("Serif",Font.PLAIN,30)); 
+l2=new JLabel("VEG FOOD :"); 
+l2.setBounds(650,150,300,30); 
+l2.setFont(new Font("Serif",Font.PLAIN,30)); 
+l3=new JLabel("TIFFINS :"); 
+l3.setBounds(1050,150,300,30); 
+l3.setFont(new Font("Serif",Font.PLAIN,30)); 
+l4=new JLabel("SNACK :"); 
+l4.setBounds(1450,150,300,30); 
+l4.setFont(new Font("Serif",Font.PLAIN,30)); 
+cb1=new JCheckBox("Mutton @ 200"); 
+cb1.setBounds(250,200,150,20); 
+cb1.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb2=new JCheckBox("Egg fried rice @ 130"); 
+cb2.setBounds(250,250,200,30); 
+cb2.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb3=new JCheckBox("Egg curry @ 90"); 
+cb3.setBounds(250,300,150,30); 
+cb3.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb4=new JCheckBox("Chicken @ 150"); 
+cb4.setBounds(250,350,150,20); 
+cb4.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb5=new JCheckBox("Biryani @ 120"); 
+cb5.setBounds(250,400,150,30); 
+cb5.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb6=new JCheckBox("Chicken Biryani @ 180"); 
+cb6.setBounds(250,450,250,30); 
+cb6.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb7=new JCheckBox("Fried chicken @ 180"); 
+cb7.setBounds(250,500,250,30); 
+cb7.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb8=new JCheckBox("Chicken Burger @ 150"); 
+cb8.setBounds(250,550,250,30); 
+cb8.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb9=new JCheckBox("Chicken Pesto @ 120"); 
+cb9.setBounds(250,600,250,30); 
+cb9.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb10=new JCheckBox("KFC @ 250"); 
+cb10.setBounds(250,650,250,30); 
+cb10.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb11=new JCheckBox("Veg fried rice @ 100"); 
+cb11.setBounds(650,200,200,30); 
+cb11.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb12=new JCheckBox("Veg Biryani @ 130"); 
+cb12.setBounds(650,250,200,30); 
+cb12.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb13=new JCheckBox("Paneer @ 100"); 
+cb13.setBounds(650,300,150,30); 
+cb13.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb14=new JCheckBox("Mushrooms @ 150"); 
+cb14.setBounds(650,350,200,20); 
+cb14.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb15=new JCheckBox("Phool Makhani @ 180"); 
+cb15.setBounds(650,400,250,20); 
+cb15.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb16=new JCheckBox("Green piece @ 90"); 
+cb16.setBounds(650,450,200,30); 
+cb16.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb17=new JCheckBox("French Fries @ 90"); 
+cb17.setBounds(650,500,200,30); 
+cb17.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb18=new JCheckBox("Manchuriya @ 110"); 
+cb18.setBounds(650,550,200,30); 
+cb18.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb19=new JCheckBox("Corriander Rice @ 120"); 
+cb19.setBounds(650,600,200,30); 
+cb19.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb20=new JCheckBox("Coconut rice @ 100"); 
+cb20.setBounds(650,650,200,30); 
+cb20.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb21=new JCheckBox("Idly @ 15"); 
+cb21.setBounds(1050,200,200,30); 
+cb21.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb22=new JCheckBox("Plain Dosa @ 30"); 
+cb22.setBounds(1050,250,200,30); 
+cb22.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb23=new JCheckBox("Onion Dosa @ 35"); 
+cb23.setBounds(1050,300,200,30); 
+cb23.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb24=new JCheckBox("Chapathi @ 20"); 
+cb24.setBounds(1050,350,200,30); 
+cb24.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb25=new JCheckBox("Mysore Bonda @ 15"); 
+cb25.setBounds(1050,400,200,30); 
+cb25.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb26=new JCheckBox("Poori @ 20"); 
+cb26.setBounds(1050,450,200,30); 
+cb26.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb27=new JCheckBox("Vada @ 30"); 
+cb27.setBounds(1050,500,200,30); 
+cb27.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb28=new JCheckBox("Pulka @ 30"); 
+cb28.setBounds(1050,550,200,30); 
+cb28.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb29=new JCheckBox("Pesara Dosa @ 35"); 
+cb29.setBounds(1050,600,200,30); 
+cb29.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb30=new JCheckBox("Ootappam @ 30"); 
+cb30.setBounds(1050,650,200,30); 
+cb30.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb31=new JCheckBox("Salad @ 50"); 
+cb31.setBounds(1450,200,200,30); 
+cb31.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb32=new JCheckBox("Baby Corn @ 30"); 
+cb32.setBounds(1450,250,200,30); 
+cb32.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb33=new JCheckBox("Ice Cream @ 60"); 
+cb33.setBounds(1450,300,200,30); 
+cb33.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb34=new JCheckBox("Pastry @ 70"); 
+cb34.setBounds(1450,350,200,30); 
+cb34.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb35=new JCheckBox("Egg Noodles @ 80"); 
+cb35.setBounds(1450,400,200,30); 
+cb35.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb36=new JCheckBox("Chicken Noodles @ 130"); 
+cb36.setBounds(1450,450,250,30); 
+cb36.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb37=new JCheckBox("Samosa @ 30"); 
+cb37.setBounds(1450,500,200,30); 
+cb37.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb38=new JCheckBox("Cool Drink @ 50"); 
+cb38.setBounds(1450,550,200,30); 
+cb38.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb39=new JCheckBox("Pizza @ 130"); 
+cb39.setBounds(1450,600,200,30); 
+cb39.setFont(new Font("Serif",Font.PLAIN,20)); 
+cb40=new JCheckBox("Burger @ 80"); 
+cb40.setBounds(1450,650,200,30); 
+cb40.setFont(new Font("Serif",Font.PLAIN,20)); 
+b=new JButton("Order"); 
+b.setBounds(850,750,150,30); 
+b.setFont(new Font("Serif",Font.PLAIN,30)); 
+b.addActionListener(this); 
+add(l);add(l1);add(l2);add(l3);add(l4);add(cb1);add(cb2);add(cb3);add(cb4);add(c 
+b5);add(cb6);add(cb7);add(cb8);add(cb9);add(cb10);add(cb11);add(cb12);add(cb 
+13);add(cb14);add(cb15);add(cb16);add(cb17);add(cb18);add(cb19);add(cb20); 
+add(cb21);add(cb22);add(cb23);add(cb24);add(cb25);add(cb26);add(cb27);add(c 
+b28);add(cb29);add(cb30);add(cb31);add(cb32);add(cb33);add(cb34);add(cb35);a 
+dd(cb36);add(cb37);add(cb38);add(cb39);add(cb40);add(b); 
+setSize(400,400); 
+setLayout(null); 
+setVisible(true); 
+setDefaultCloseOperation(EXIT_ON_CLOSE); 
+} 
+public void actionPerformed(ActionEvent e) 
+{ 
+float amount=0; 
+String msg=""; 
+if(cb1.isSelected()) 
+{ 
+amount+=200; 
+msg+="Mutton: 200\n"; 
+} 
+if(cb2.isSelected()) 
+{ 
+amount+=130; 
+msg+="Egg Fried Rice: 130\n"; 
+} 
+if(cb3.isSelected()) 
+{ 
+amount+=90; 
+msg+="Egg Curry: 90\n"; 
+} 
+if(cb4.isSelected()) 
+{ 
+amount+=150; 
+msg+="chicken: 150\n"; 
+} 
+if(cb5.isSelected()) 
+{ 
+amount+=120; 
+msg+="Biryani: 120\n"; 
+} 
+if(cb6.isSelected()) 
+{ 
+amount+=180; 
+msg+="Chicken Biryani: 180\n"; 
+} 
+if(cb7.isSelected()) 
+{ 
+amount+=180; 
+msg+="Fried Chicken: 180\n"; 
+} 
+if(cb8.isSelected()) 
+{ 
+amount+=150; 
+msg+="Chicken Burger: 150\n"; 
+} 
+if(cb9.isSelected()) 
+{ 
+amount+=120; 
+msg+="Chicken Pesto: 120\n"; 
+} 
+if(cb10.isSelected()) 
+{ 
+amount+=250; 
+msg+="KFC: 250\n"; 
+} 
+if(cb11.isSelected()) 
+{ 
+amount+=100; 
+msg+="Veg fried rice: 100\n"; 
+} 
+if(cb12.isSelected()) 
+{ 
+amount+=130; 
+msg+="Veg Biryani: 130\n"; 
+} 
+if(cb13.isSelected()) 
+{ 
+amount+=100; 
+msg+="Paneer: 100\n"; 
+} 
+if(cb14.isSelected()) 
+{ 
+amount+=150; 
+msg+="Mushrooms: 150\n"; 
+} 
+if(cb15.isSelected()) 
+{ 
+amount+=180; 
+msg+="Phool Makhani: 180\n"; 
+} 
+if(cb16.isSelected()) 
+{ 
+amount+=90; 
+msg+="Green Piece: 90\n"; 
+} 
+if(cb17.isSelected()) 
+{ 
+amount+=90; 
+msg+="French Fries: 90\n"; 
+} 
+if(cb18.isSelected()) 
+{ 
+amount+=110; 
+msg+="Manchuriya: 110\n"; 
+} 
+if(cb19.isSelected()) 
+{ 
+amount+=120; 
+msg+="Corriander Rice: 120\n"; 
+} 
+if(cb20.isSelected()) 
+{ 
+amount+=100; 
+msg+="Coconut Rice: 100\n"; 
+} 
+if(cb21.isSelected()) 
+{ 
+amount+=15; 
+msg+="Idly: 15\n"; 
+} 
+if(cb22.isSelected()) 
+{ 
+amount+=30; 
+msg+="Plain Dosa: 30\n"; 
+} 
+if(cb23.isSelected()) 
+{ 
+amount+=35; 
+msg+="Onion Dosa: 35\n"; 
+} 
+if(cb24.isSelected()) 
+{ 
+amount+=20; 
+msg+="Chapathi: 20\n"; 
+} 
+if(cb25.isSelected()) 
+{ 
+amount+=15; 
+msg+="Mysore Bonda: 15\n"; 
+} 
+if(cb26.isSelected()) 
+{ 
+amount+=20; 
+msg+="Poori: 20\n"; 
+} 
+if(cb27.isSelected()) 
+{ 
+amount+=30; 
+msg+="Vada: 30\n"; 
+} 
+if(cb28.isSelected()) 
+{ 
+amount+=30; 
+msg+="Pulka: 30\n"; 
+} 
+if(cb29.isSelected()) 
+{ 
+amount+=35; 
+msg+="Pesara Dosa: 35\n"; 
+} 
+if(cb30.isSelected()) 
+{ 
+amount+=30; 
+msg+="Ootappam: 30\n"; 
+} 
+if(cb31.isSelected()) 
+{ 
+amount+=50; 
+msg+="Salad: 50\n"; 
+} 
+if(cb32.isSelected()) 
+{ 
+amount+=30; 
+msg+="Baby Corn: 30\n"; 
+} 
+if(cb33.isSelected()) 
+{ 
+amount+=60; 
+msg+="Ice Cream: 60\n"; 
+} 
+if(cb34.isSelected()) 
+{ 
+amount+=70; 
+msg+="Pastry: 70\n"; 
+} 
+if(cb35.isSelected()) 
+{ 
+amount+=80; 
+msg+="Egg Noodles: 80\n"; 
+} 
+if(cb36.isSelected()) 
+{ 
+amount+=130; 
+msg+="Chicken Noodles: 130\n"; 
+} 
+if(cb37.isSelected()) 
+{ 
+amount+=30; 
+msg+="Samosa: 30\n"; 
+} 
+if(cb38.isSelected()) 
+{ 
+amount+=50; 
+msg+="Cool Drink: 50\n"; 
+} 
+if(cb39.isSelected()) 
+{ 
+amount+=130; 
+msg+="Pizza: 130\n"; 
+} 
+if(cb40.isSelected()) 
+{ 
+amount+=80; 
+msg+="Burger: 80\n"; 
+} 
+msg+="- \n"; 
+JOptionPane.showMessageDialog(this,msg+"Total: "+amount); 
+} 
+public static void main(String[] args) 
+{ 
+new Cost(); 
+Cost f = new Cost(); 
+f.setTitle("Restaurant Billing Management System"); 
+f.setVisible(true); 
+} 
+} 
